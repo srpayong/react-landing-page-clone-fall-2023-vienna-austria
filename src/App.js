@@ -8,8 +8,8 @@ export default function App() {
       <main>
         <section className={styles.heroSection}>
           <div className={styles.container}>
-            <header className={`${styles.nav} ${styles.navbarWrapper}`}>
-              <nav className={styles.linksContainer}>
+            <header>
+              <nav>
                 <a href="/#" className={styles.logoLink}>
                   <img src="./images/Logo.svg" className={styles.img} />
                 </a>
@@ -59,7 +59,7 @@ export default function App() {
           </div>
         </section>
         <section>
-          <div className={styles.imgStar}>
+          <div className={styles.imgStar} alt="star">
             <div className={styles.text}>
               <img src="./images/star.svg" />
               Pause or
@@ -84,23 +84,38 @@ export default function App() {
               class <br />
               design <br />
             </div>
+            <div className={styles.imgPentagon}>
+              <div className={styles.text}>
+                <img src="./images/pentagon.svg" />
+                No
+                <br />
+                strings <br />
+                attached <br />
+              </div>
+            </div>
           </div>
         </section>
       </main>
       <footer>
         <div>
-          <div>
-            <a href="/#" className={styles.footerLogo}>
-              <img src="./images/Logo.svg" className={styles.img} />Ⓒ 2023 My
-              Design Buddy Ltd
-            </a>
-          </div>
+          <img
+            src="./images/footerwave.svg"
+            alt="footerWave"
+            className={styles.footerWave}
+          />
         </div>
-        <div></div>
-        <ul className={styles.footerLi}>
-          <li>Terms & Conditions</li>
-          <li>Privacy Policy</li>
-        </ul>
+        \
+        <div className={styles.footerLogo}>
+          <div>
+            My Design Buddy
+            <br />Ⓒ 2023 My Design Buddy Ltd
+          </div>
+          <ul className={`${styles.footerLogo} ${styles.footerLi}`}>
+            <li>Terms & Conditions</li>
+            <br />
+            <li>Privacy Policy</li>
+          </ul>
+        </div>
       </footer>
     </>
   );
